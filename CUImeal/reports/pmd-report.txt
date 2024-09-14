@@ -1,0 +1,302 @@
+src/BO/MealDetailsBO.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/BO/MealDetailsBO.java:4:	UnnecessaryImport:	UnnecessaryImport: Unused import 'java.text.ParseException'
+src/BO/MealDetailsBO.java:5:	UnnecessaryImport:	UnnecessaryImport: Unused import 'java.text.SimpleDateFormat'
+src/BO/MealDetailsBO.java:8:	UnnecessaryImport:	UnnecessaryImport: Unused import 'java.util.stream.Stream'
+src/BO/MealDetailsBO.java:14:	CommentRequired:	CommentRequired: Class comments are required
+src/BO/MealDetailsBO.java:14:	TooManyMethods:	TooManyMethods: This class has too many methods, consider refactoring it.
+src/BO/MealDetailsBO.java:15:	CommentRequired:	CommentRequired: Field comments are required
+src/BO/MealDetailsBO.java:17:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:21:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:21:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'md' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:21:	ShortVariable:	ShortVariable: Avoid variables with short names like md
+src/BO/MealDetailsBO.java:33:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'carbs' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:33:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'quantity' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:35:	AvoidDuplicateLiterals:	AvoidDuplicateLiterals: The String literal "Enter Valid Calories" appears 4 times in this file; the first occurrence is on line 35
+src/BO/MealDetailsBO.java:40:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'protein' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:40:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'quantity' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:47:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'quantity' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:47:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'vitamins' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:54:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'calories' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:54:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'quantity' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:60:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'userId' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:66:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:66:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealDate' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:71:	PreserveStackTrace:	PreserveStackTrace: Thrown exception does not preserve the stack trace of exception 'e' on all code paths
+src/BO/MealDetailsBO.java:75:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'quantity' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:81:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealType' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:86:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:86:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:92:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:92:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'userId' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:98:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:98:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:103:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:103:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:103:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealType' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:109:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:109:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealDate' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:109:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:114:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/BO/MealDetailsBO.java:114:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'food' is not assigned and could be declared final
+src/BO/MealDetailsBO.java:114:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/BO/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/CustomException/CustomException.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/CustomException/CustomException.java:3:	CommentRequired:	CommentRequired: Class comments are required
+src/CustomException/CustomException.java:3:	MissingSerialVersionUID:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/CustomException/CustomException.java:4:	CallSuperInConstructor:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/CustomException/CustomException.java:4:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/CustomException/CustomException.java:4:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'message' is not assigned and could be declared final
+src/CustomException/CustomException.java:5:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/CustomException/CustomException.java:7:	MissingOverride:	MissingOverride: The method 'toString()' is missing an @Override annotation.
+src/CustomException/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/DAO/IMealDetailsDAO.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/DAO/IMealDetailsDAO.java:7:	CommentRequired:	CommentRequired: Class comments are required
+src/DAO/IMealDetailsDAO.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:10:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:12:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:14:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:16:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:18:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:20:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/IMealDetailsDAO.java:22:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/MealDetailsDAO.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/DAO/MealDetailsDAO.java:7:	CommentRequired:	CommentRequired: Class comments are required
+src/DAO/MealDetailsDAO.java:8:	CommentRequired:	CommentRequired: Field comments are required
+src/DAO/MealDetailsDAO.java:8:	ImmutableField:	ImmutableField: Field 'conn' may be declared final
+src/DAO/MealDetailsDAO.java:10:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/DAO/MealDetailsDAO.java:12:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'url' could be declared final
+src/DAO/MealDetailsDAO.java:13:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'user' could be declared final
+src/DAO/MealDetailsDAO.java:14:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'password' could be declared final
+src/DAO/MealDetailsDAO.java:16:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/DAO/MealDetailsDAO.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealDetails' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:22:	MissingOverride:	MissingOverride: The method 'createMealDetail(MealDetails)' is missing an @Override annotation.
+src/DAO/MealDetailsDAO.java:23:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'query' could be declared final
+src/DAO/MealDetailsDAO.java:24:	UseTryWithResources:	UseTryWithResources: Consider using a try-with-resources statement instead of explicitly closing the resource
+src/DAO/MealDetailsDAO.java:25:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:25:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:25:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:35:	ShortVariable:	ShortVariable: Avoid variables with short names like a
+src/DAO/MealDetailsDAO.java:35:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'a'.
+src/DAO/MealDetailsDAO.java:41:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/DAO/MealDetailsDAO.java:44:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:50:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'userId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:51:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'query' could be declared final
+src/DAO/MealDetailsDAO.java:52:	CloseResource:	CloseResource: Ensure that resources like this ResultSet object are closed after use
+src/DAO/MealDetailsDAO.java:52:	ShortVariable:	ShortVariable: Avoid variables with short names like rs
+src/DAO/MealDetailsDAO.java:52:	UnusedAssignment:	UnusedAssignment: The initializer for variable 'rs' is never used (overwritten on line 56)
+src/DAO/MealDetailsDAO.java:54:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:54:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:54:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:58:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/DAO/MealDetailsDAO.java:61:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:66:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'userId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:66:	MissingOverride:	MissingOverride: The method 'findById(int)' is missing an @Override annotation.
+src/DAO/MealDetailsDAO.java:67:	UseTryWithResources:	UseTryWithResources: Consider using a try-with-resources statement instead of explicitly closing the resource
+src/DAO/MealDetailsDAO.java:68:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'querry' could be declared final
+src/DAO/MealDetailsDAO.java:69:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/DAO/MealDetailsDAO.java:71:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:71:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:71:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:73:	CloseResource:	CloseResource: Ensure that resources like this ResultSet object are closed after use
+src/DAO/MealDetailsDAO.java:73:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'rs' could be declared final
+src/DAO/MealDetailsDAO.java:73:	ShortVariable:	ShortVariable: Avoid variables with short names like rs
+src/DAO/MealDetailsDAO.java:74:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/DAO/MealDetailsDAO.java:76:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/DAO/MealDetailsDAO.java:79:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/DAO/MealDetailsDAO.java:82:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/DAO/MealDetailsDAO.java:85:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:89:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/DAO/MealDetailsDAO.java:92:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:98:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:99:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'query' could be declared final
+src/DAO/MealDetailsDAO.java:100:	CloseResource:	CloseResource: Ensure that resources like this ResultSet object are closed after use
+src/DAO/MealDetailsDAO.java:100:	ShortVariable:	ShortVariable: Avoid variables with short names like rs
+src/DAO/MealDetailsDAO.java:100:	UnusedAssignment:	UnusedAssignment: The initializer for variable 'rs' is never used (overwritten on line 104)
+src/DAO/MealDetailsDAO.java:102:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:102:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:102:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:106:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/DAO/MealDetailsDAO.java:109:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:115:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:116:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'query' could be declared final
+src/DAO/MealDetailsDAO.java:117:	UseTryWithResources:	UseTryWithResources: Consider using a try-with-resources statement instead of explicitly closing the resource
+src/DAO/MealDetailsDAO.java:118:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:118:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:118:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:122:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:126:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/DAO/MealDetailsDAO.java:129:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:135:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:135:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealType' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:136:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'querry' could be declared final
+src/DAO/MealDetailsDAO.java:137:	UseTryWithResources:	UseTryWithResources: Consider using a try-with-resources statement instead of explicitly closing the resource
+src/DAO/MealDetailsDAO.java:138:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:138:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:138:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:141:	ShortVariable:	ShortVariable: Avoid variables with short names like a
+src/DAO/MealDetailsDAO.java:141:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'a'.
+src/DAO/MealDetailsDAO.java:147:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/DAO/MealDetailsDAO.java:150:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:156:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealDate' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:156:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:157:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'querry' could be declared final
+src/DAO/MealDetailsDAO.java:158:	UseTryWithResources:	UseTryWithResources: Consider using a try-with-resources statement instead of explicitly closing the resource
+src/DAO/MealDetailsDAO.java:159:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:159:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:159:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:162:	ShortVariable:	ShortVariable: Avoid variables with short names like a
+src/DAO/MealDetailsDAO.java:162:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'a'.
+src/DAO/MealDetailsDAO.java:168:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/DAO/MealDetailsDAO.java:171:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/MealDetailsDAO.java:177:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'food' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:177:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/DAO/MealDetailsDAO.java:178:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'querry' could be declared final
+src/DAO/MealDetailsDAO.java:179:	UseTryWithResources:	UseTryWithResources: Consider using a try-with-resources statement instead of explicitly closing the resource
+src/DAO/MealDetailsDAO.java:180:	CloseResource:	CloseResource: Ensure that resources like this PreparedStatement object are closed after use
+src/DAO/MealDetailsDAO.java:180:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'ps' could be declared final
+src/DAO/MealDetailsDAO.java:180:	ShortVariable:	ShortVariable: Avoid variables with short names like ps
+src/DAO/MealDetailsDAO.java:183:	ShortVariable:	ShortVariable: Avoid variables with short names like a
+src/DAO/MealDetailsDAO.java:183:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'a'.
+src/DAO/MealDetailsDAO.java:189:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/DAO/MealDetailsDAO.java:192:	AvoidPrintStackTrace:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/DAO/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/Main/Main.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/Main/Main.java:11:	CommentRequired:	CommentRequired: Class comments are required
+src/Main/Main.java:11:	ShortClassName:	ShortClassName: Avoid short class names like Main
+src/Main/Main.java:11:	UseUtilityClass:	UseUtilityClass: This utility class has a non-private constructor
+src/Main/Main.java:12:	CommentDefaultAccessModifier:	CommentDefaultAccessModifier: Missing commented default access modifier on field 'sc'
+src/Main/Main.java:12:	CommentRequired:	CommentRequired: Field comments are required
+src/Main/Main.java:12:	MutableStaticState:	MutableStaticState: Do not use non-final non-private static fields
+src/Main/Main.java:12:	ShortVariable:	ShortVariable: Avoid variables with short names like sc
+src/Main/Main.java:13:	CommentRequired:	CommentRequired: Field comments are required
+src/Main/Main.java:13:	UnusedPrivateField:	UnusedPrivateField: Avoid unused private fields such as 'response'.
+src/Main/Main.java:15:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Main/Main.java:18:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:19:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:20:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:21:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:22:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:23:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:24:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:25:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:26:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:27:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'option' could be declared final
+src/Main/Main.java:52:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:56:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:64:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mdservice' could be declared final
+src/Main/Main.java:65:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:66:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mealId' could be declared final
+src/Main/Main.java:67:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:68:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:69:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'option' could be declared final
+src/Main/Main.java:72:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:73:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:74:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mealType' could be declared final
+src/Main/Main.java:79:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:80:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mealDate' could be declared final
+src/Main/Main.java:85:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:86:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'Food' could be declared final
+src/Main/Main.java:86:	LocalVariableNamingConventions:	LocalVariableNamingConventions: The local variable name 'Food' doesn't match '[a-z][a-zA-Z0-9]*'
+src/Main/Main.java:91:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:98:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mdservice' could be declared final
+src/Main/Main.java:99:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:100:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mealId' could be declared final
+src/Main/Main.java:102:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'response'.
+src/Main/Main.java:104:	AvoidLosingExceptionInformation:	AvoidLosingExceptionInformation: Avoid statements in a catch block that invoke accessors on the exception without using the information
+src/Main/Main.java:109:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'mdservice' could be declared final
+src/Main/Main.java:110:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:111:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'userId' could be declared final
+src/Main/Main.java:113:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'response'.
+src/Main/Main.java:115:	AvoidLosingExceptionInformation:	AvoidLosingExceptionInformation: Avoid statements in a catch block that invoke accessors on the exception without using the information
+src/Main/Main.java:120:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'md' could be declared final
+src/Main/Main.java:120:	ShortVariable:	ShortVariable: Avoid variables with short names like md
+src/Main/Main.java:121:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'mdservice'.
+src/Main/Main.java:122:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:123:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:124:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:125:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'option' could be declared final
+src/Main/Main.java:140:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:144:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:146:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:149:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:151:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:153:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:155:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:157:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:159:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Main/Main.java:162:	UnusedLocalVariable:	UnusedLocalVariable: Avoid unused local variables such as 'response'.
+src/Main/Main.java:164:	AvoidLosingExceptionInformation:	AvoidLosingExceptionInformation: Avoid statements in a catch block that invoke accessors on the exception without using the information
+src/Main/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/Response/ResponseHandle.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/Response/ResponseHandle.java:3:	CommentRequired:	CommentRequired: Class comments are required
+src/Response/ResponseHandle.java:4:	CommentRequired:	CommentRequired: Field comments are required
+src/Response/ResponseHandle.java:4:	ImmutableField:	ImmutableField: Field 'success' may be declared final
+src/Response/ResponseHandle.java:4:	UnusedPrivateField:	UnusedPrivateField: Avoid unused private fields such as 'success'.
+src/Response/ResponseHandle.java:5:	CommentRequired:	CommentRequired: Field comments are required
+src/Response/ResponseHandle.java:5:	ImmutableField:	ImmutableField: Field 'message' may be declared final
+src/Response/ResponseHandle.java:5:	UnusedPrivateField:	UnusedPrivateField: Avoid unused private fields such as 'message'.
+src/Response/ResponseHandle.java:7:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Response/ResponseHandle.java:7:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'message' is not assigned and could be declared final
+src/Response/ResponseHandle.java:7:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'success' is not assigned and could be declared final
+src/Response/ResponseHandle.java:10:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/Response/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/Service/MealDetailService.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/Service/MealDetailService.java:11:	CommentRequired:	CommentRequired: Class comments are required
+src/Service/MealDetailService.java:12:	CommentRequired:	CommentRequired: Field comments are required
+src/Service/MealDetailService.java:14:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:15:	AssignmentToNonFinalStatic:	AssignmentToNonFinalStatic: Possible unsafe assignment to non-final static field 'mealDetailsBO' in a constructor.
+src/Service/MealDetailService.java:18:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:18:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'md' is not assigned and could be declared final
+src/Service/MealDetailService.java:18:	ShortVariable:	ShortVariable: Avoid variables with short names like md
+src/Service/MealDetailService.java:21:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/Service/MealDetailService.java:28:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:28:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'userId' is not assigned and could be declared final
+src/Service/MealDetailService.java:31:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/Service/MealDetailService.java:37:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:37:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/Service/MealDetailService.java:40:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/Service/MealDetailService.java:46:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:46:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/Service/MealDetailService.java:46:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealType' is not assigned and could be declared final
+src/Service/MealDetailService.java:49:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/Service/MealDetailService.java:55:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:55:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealDate' is not assigned and could be declared final
+src/Service/MealDetailService.java:55:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/Service/MealDetailService.java:58:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/Service/MealDetailService.java:64:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/Service/MealDetailService.java:64:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'food' is not assigned and could be declared final
+src/Service/MealDetailService.java:64:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealId' is not assigned and could be declared final
+src/Service/MealDetailService.java:67:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/Service/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/VO/MealDetails.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/VO/MealDetails.java:3:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/VO/MealDetails.java:3:	CommentRequired:	CommentRequired: Class comments are required
+src/VO/MealDetails.java:3:	DataClass:	DataClass: The class 'MealDetails' is suspected to be a Data Class (WOC=5.263%, NOPA=0, NOAM=18, WMC=19)
+src/VO/MealDetails.java:11:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:11:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:12:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:12:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:13:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:13:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:14:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:14:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:15:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:15:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:16:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:16:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:17:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:17:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:18:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:18:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:19:	CommentRequired:	CommentRequired: Field comments are required
+src/VO/MealDetails.java:19:	FieldDeclarationsShouldBeAtStartOfClass:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/VO/MealDetails.java:25:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealType' is not assigned and could be declared final
+src/VO/MealDetails.java:33:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'mealDate' is not assigned and could be declared final
+src/VO/MealDetails.java:41:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'userId' is not assigned and could be declared final
+src/VO/MealDetails.java:49:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'foodName' is not assigned and could be declared final
+src/VO/MealDetails.java:57:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'quantity' is not assigned and could be declared final
+src/VO/MealDetails.java:65:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'calories' is not assigned and could be declared final
+src/VO/MealDetails.java:73:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'protein' is not assigned and could be declared final
+src/VO/MealDetails.java:81:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'carbs' is not assigned and could be declared final
+src/VO/MealDetails.java:89:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'vitamins' is not assigned and could be declared final
+src/VO/package-info.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
