@@ -8,6 +8,7 @@ import java.time.format.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -20,7 +21,7 @@ import VO.UserInfo;
 public class MealDetailsBO {
 
 	public IMealDetailsDAO mdDAO;
-	static Logger Log = Logger.getLogger(Main.class);
+	static Logger Log = Logger.getLogger(MealDetailsBO.class);
 
 	// Constructor
 
@@ -42,7 +43,7 @@ public class MealDetailsBO {
 		validVitamins(md.getVitamins(), md.getQuantity());
 		validProteins(md.getProtein(), md.getQuantity());
 		validCarbohydrate(md.getCarbs(), md.getQuantity());
-		flag=mdDAO.createMealDetail(md);
+		flag = mdDAO.createMealDetail(md);
 		return flag;
 	}
 
@@ -51,10 +52,10 @@ public class MealDetailsBO {
 	public List<MealDetails> findbyId(int userId) throws SQLException, ValidUser {
 
 		List<MealDetails> md = new ArrayList<>();
-		boolean flag = false;
+//		boolean flag = false;
 		validUserId(userId);
 		md = mdDAO.findById(userId);
-		flag = true;
+//		flag = true;
 		return md;
 
 	}
@@ -66,7 +67,7 @@ public class MealDetailsBO {
 		boolean flag = false;
 		validmealType(mealType);
 		validmealId(mealId);
-		flag=mdDAO.updateMealType(mealType, mealId);
+		flag = mdDAO.updateMealType(mealType, mealId);
 		return flag;
 
 	}
@@ -76,7 +77,7 @@ public class MealDetailsBO {
 		boolean flag = false;
 		validmealId(mealId);
 		validDate(mealDate);
-		flag=mdDAO.updateMealDate(mealDate, mealId);
+		flag = mdDAO.updateMealDate(mealDate, mealId);
 		return flag;
 
 	}
@@ -85,30 +86,45 @@ public class MealDetailsBO {
 
 		boolean flag = false;
 		validmealId(mealId);
-		flag=mdDAO.updateFood(food, mealId);
+		flag = mdDAO.updateFood(food, mealId);
 		return flag;
 
 	}
 
-	// Delete
+	// Find ALL
 
-	public boolean deletemealDetails(int mealId) throws validItems, SQLException {
+	public List<MealDetails> findAllDetails() throws validItems, SQLException {
 
-		boolean flag = false;
-		validmealId(mealId);
-		flag=mdDAO.deletemealDetails(mealId);
-		flag = true;
-		return flag;
+		List<MealDetails> md = new ArrayList<>();
+		md = mdDAO.findAllDetails();
+		return md;
 
 	}
 
 	// Display using Joins
 
 	public List<UserInfo> displayUsingJoins() throws SQLException {
-		List<UserInfo> user = null;
-		user = mdDAO.displayUsingJoins();
-		return user;
+		List<UserInfo> users = null;
+		users = mdDAO.displayUsingJoins();
+		return users;
 
+	}
+	
+	//Display Using Streams
+	
+	public List<UserInfo> displayUsingStreams(int value) throws SQLException {
+		List<UserInfo> users=displayUsingJoins();
+		List<UserInfo> result=new ArrayList<>();
+		if (users.size() > 0) {
+			if (value == 1) {
+				result = users.stream().filter(user -> "Female".equalsIgnoreCase(user.getGender()))
+						.collect(Collectors.toList());
+			} else {
+				result = users.stream().filter(user -> "Male".equalsIgnoreCase(user.getGender()))
+						.collect(Collectors.toList());
+			}
+		}
+		return result;
 	}
 
 	// Validation
@@ -155,13 +171,13 @@ public class MealDetailsBO {
 
 		try {
 			LocalDate userDate = LocalDate.parse(mealDate);
-			Date currentDate=new Date();
-			 LocalDate currDate = LocalDate.now();
-			 if (userDate.isEqual(currDate) || userDate.isBefore(currDate)) {
-	                return true;
-	            } else {
-	            	throw new ValidDateEx("InValid Date");
-	            }
+			Date currentDate = new Date();
+			LocalDate currDate = LocalDate.now();
+			if (userDate.isEqual(currDate) || userDate.isBefore(currDate)) {
+				return true;
+			} else {
+				throw new ValidDateEx("InValid Date");
+			}
 		} catch (DateTimeParseException e) {
 			throw new ValidDateEx("InValid Date");
 		}

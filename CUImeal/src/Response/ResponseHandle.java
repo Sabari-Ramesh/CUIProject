@@ -25,7 +25,7 @@ public class ResponseHandle {
 		return md;
 	}
 
-	public void setMd(List<MealDetails> md) {
+	public void setmealDetails(List<MealDetails> md) {
 		this.md = md;
 	}
 

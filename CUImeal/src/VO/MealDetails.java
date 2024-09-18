@@ -11,6 +11,15 @@ public class MealDetails {
 	private double protein;
 	private double carbs;
 	private double vitamins;
+	private String foodType;
+
+	public String getFoodType() {
+		return foodType;
+	}
+
+	public void setFoodType(String foodType) {
+		this.foodType = foodType;
+	}
 
 	public int getMealType() {
 		return mealType;

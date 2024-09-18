@@ -16,8 +16,8 @@ public class Main {
 	private static ResponseHandle response;
 	static Logger Log = Logger.getLogger(Main.class);
 
-	public static void main(String[] args)
-			throws SQLException, validItems, ValidMealType, ValidQuantity, ValidDateEx, ValidUser, DuplicateMealDetailException {
+	public static void main(String[] args) throws SQLException, validItems, ValidMealType, ValidQuantity, ValidDateEx,
+			ValidUser, DuplicateMealDetailException {
 
 		PropertyConfigurator.configure("D:\\JAVA ECLIPSE\\Demo\\src\\properties\\Log4j.properties");
 		Log.info(" Application Started Started..");
@@ -28,8 +28,8 @@ public class Main {
 			System.out.println("\t 1. Create MealDetails");
 			System.out.println("\t 2. Fetch By UserId");
 			System.out.println("\t 3. Update MealDetails");
-			System.out.println("\t 4. Delete MealDetails");
-			System.out.println("\t 5. List All Using Joins");
+			System.out.println("\t 4. Find All MealDetails");
+			System.out.println("\t 5. Joins");
 			System.out.println("\t 6. Display Using Stream Api");
 			System.out.println("\t 7. Exit");
 			System.out.println("-------------------------------------------------------------------------------------");
@@ -50,7 +50,7 @@ public class Main {
 				break;
 			}
 			case 4: {
-				deletemealDetails();
+				findAllDetails();
 				break;
 			}
 			case 5: {
@@ -77,7 +77,8 @@ public class Main {
 
 	// Insert
 
-	private static void insertData() throws SQLException, ValidMealType, ValidQuantity, ValidDateEx, ValidUser, DuplicateMealDetailException {
+	private static void insertData()
+			throws SQLException, ValidMealType, ValidQuantity, ValidDateEx, ValidUser, DuplicateMealDetailException {
 
 		Log.info("Created Meal Details is triggered.....");
 		MealDetails md = new MealDetails();
@@ -161,7 +162,7 @@ public class Main {
 		int userId = sc.nextInt();
 		ResponseHandle response = mdservice.findById(userId);
 		List<MealDetails> md = response.getMd();
-		printMealDetails(md,response);
+		printMealDetails(md, response);
 		if (response.getSucessMessage() != null) {
 			System.out.println(response.getSucessMessage());
 		} else {
@@ -172,7 +173,8 @@ public class Main {
 
 	// Update
 
-	private static void update() throws SQLException, validItems, ValidMealType, ValidDateEx, DuplicateMealDetailException {
+	private static void update()
+			throws SQLException, validItems, ValidMealType, ValidDateEx, DuplicateMealDetailException {
 
 		Log.info("Update method is triggred.....");
 		MealDetailService mdservice = new MealDetailService();
@@ -235,15 +237,15 @@ public class Main {
 
 	}
 
-	// DELETE
+	// FIND ALL
 
-	private static void deletemealDetails() throws SQLException, validItems, ValidUser {
+	private static void findAllDetails() throws SQLException, validItems, ValidUser {
 
-		Log.info("Delete Meal Details is triggered.....");
+		Log.info("find All Details is triggered.....");
 		MealDetailService mdservice = new MealDetailService();
-		System.out.println("Enter the maelId :");
-		int mealId = sc.nextInt();
-		ResponseHandle response = mdservice.deletemealDetails(mealId);
+		ResponseHandle response = mdservice.findAllDetails();
+		List<MealDetails> md = response.getMd();
+		printMealDetails(md, response);
 		if (response.getSucessMessage() != null) {
 			System.out.println(response.getSucessMessage());
 		} else {
@@ -274,20 +276,20 @@ public class Main {
 		ResponseHandle response = null;
 		System.out.println("\t1.Female\n\t2.Male");
 		System.out.println("Enter Your Choice :");
-		int option=sc.nextInt();
-		switch(option) {
-		case 1:{
-			response=mdservice.getUserByGender(option);
+		int option = sc.nextInt();
+		switch (option) {
+		case 1: {
+			response = mdservice.getUserByGender(option);
 			break;
-		}case 2:{
-			response=mdservice.getUserByGender(option);
 		}
-		default :{
+		case 2: {
+			response = mdservice.getUserByGender(option);
+		}
+		default: {
 			System.out.println("Enter Vaild option");
 		}
-		}		
+		}
 		printUserInfo(response.getUser());
-		
 	}
 
 	// Print Details
@@ -297,26 +299,27 @@ public class Main {
 		if (md != null && !md.isEmpty()) {
 
 			System.out.println(
-					"MealId\tmealDate\tfoodname\tquantity\tcalories\tprotein\t\tcarbs\tvitamins userId\tmeal\t");
+					String.format("%-8s %-12s %-20s %-10s %-10s %-10s %-10s %-10s %-8s %-15s", "MealId", "Meal Date",
+							"Food Name", "Quantity", "Calories", "Protein", "Carbs", "Vitamins", "UserId", "Type"));
 			System.out.println(
 					"-----------------------------------------------------------------------------------------------------------------------------");
 
 			md.stream().forEach(data -> {
-				System.out.print(data.getMealType() + "\t" + data.getMealDate() + "\t" + data.getFoodName() + "\t"
-						+ data.getQuantity() + "\t\t" + data.getCalories() + "\t\t" + data.getProtein() + "\t\t"
-						+ data.getCarbs() + "\t" + data.getVitamins() + "\t" + data.getUserId() + "\t"
-						+ data.getFoodName());
-				System.out.println();
+				System.out.println(String.format("%-8d %-12s %-20s %-10.1f %-10.1f %-10.1f %-10.1f %-10.1f %-8d %-15s",
+						data.getMealType(), data.getMealDate(), data.getFoodName(), data.getQuantity(),
+						data.getCalories(), data.getProtein(), data.getCarbs(), data.getVitamins(), data.getUserId(),
+						data.getFoodType()));
 			});
+
 			System.out.println(
-					"---------------------------------------------------------------------------------------------------------------------------------");
-		} else if(response.getSucessMessage()!=null){
+					"-----------------------------------------------------------------------------------------------------------------------------");
+
+		} else if (response.getSucessMessage() != null) {
 			System.out.println("No meal details available.");
 		}
-
 	}
 
-	// Print User Info
+	// Print User Info USING JOINS
 
 	private static void printUserInfo(List<UserInfo> user) {
 		if (!user.isEmpty()) {

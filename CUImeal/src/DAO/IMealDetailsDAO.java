@@ -14,7 +14,7 @@ public interface IMealDetailsDAO {
 
 		boolean vaildMealId(int mealId) throws SQLException;
 
-		boolean deletemealDetails(int mealId) throws SQLException;
+		List<MealDetails> findAllDetails() throws SQLException;
 
 		boolean updateMealType(int mealType, int mealId)throws SQLException;
 

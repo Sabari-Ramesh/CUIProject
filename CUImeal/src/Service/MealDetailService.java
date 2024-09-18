@@ -17,7 +17,7 @@ import Response.*;
 public class MealDetailService {
 
 	private static MealDetailsBO mealDetailsBO;
-	static Logger Log = Logger.getLogger(Main.class);
+	static Logger Log = Logger.getLogger(MealDetailService.class);
 	static ResponseHandle response;
 
 	public MealDetailService() throws SQLException {
@@ -31,34 +31,34 @@ public class MealDetailService {
 		boolean flag = false;
 		try {
 			flag = mealDetailsBO.createMealDetail(md);
-			response.setSucessMessage("Meal Detail Created successfully " + md.getUserId());
+			response.setSucessMessage("Meal Detail Created successfully created for User :" + md.getUserId());
 			Log.info("Meal Detail Created successfully " + md.getUserId());
 		} catch (SQLException e) {
 			if (e.getErrorCode() == 1062) {
-				System.err.println("Duplicate entry:"+e.getMessage());
-				Log.error("Duplicate Entry",e);
+				System.err.println("Duplicate Entry");
+				Log.error("Duplicate Entry", e);
 			} else {
-				System.err.println("SQL Error: " + e.getMessage());
 				Log.error("SQL Error: ", e);
 			}
 		} catch (validItems e) {
-			System.err.println("Validation Error: " + e.getMessage());
 			Log.error("Validation Error: ", e);
 		} catch (ValidMealType e) {
-			System.err.println("Meal Type Error: " + e.getMessage());
 			Log.error("Meal Type Error: ", e);
+			System.err.println("In valid Meal Type");
 		} catch (ValidQuantity e) {
-			System.err.println("Quantity Error: " + e.getMessage());
+			System.err.println("In valid Quantity");
 			Log.error("Quantity Error: ", e);
 		} catch (ValidDateEx e) {
-			System.err.println("Date Error: " + e.getMessage());
+			System.err.println("In Valid Date");
 			Log.error("Date error", e);
 		} catch (ValidUser e) {
-			System.err.println("User Error: " + e.getMessage());
+			System.err.println("In valid User");
 			Log.error("User Error: ", e);
 		}
-		response.setFailureMessage("Meal Details not Created Successfully " + md.getUserId());
-		Log.info("Meal Details not Created Successfully " + md.getUserId());
+		response.setFailureMessage("Meal Details not Created Successfully  for user Id" + md.getUserId());
+		if (response.getSucessMessage() == null) {
+			Log.info("Meal Details not Created Successfully " + md.getUserId());
+		}
 		return response;
 	}
 
@@ -67,26 +67,27 @@ public class MealDetailService {
 	public static ResponseHandle findById(int userId) throws validItems, ValidUser {
 
 		try {
-			List<MealDetails> md = mealDetailsBO.findbyId(userId);
-			response.setMd(md);
+			List<MealDetails> mealDetails = mealDetailsBO.findbyId(userId);
+			response.setmealDetails(mealDetails);
 			response.setSucessMessage("Sucessfully Id is fetched " + userId);
-			Log.info("Sucessfully Id is fetched " + userId);
+			Log.info(userId + " Sucessfully Id is fetched " + mealDetails);
 		} catch (SQLException e) {
-			System.err.println("SQL Error: " + e.getMessage());
 			Log.error("SQL Error: ", e);
 		} catch (ValidUser e) {
-			System.err.println("Valid User Error: " + e.getMessage());
+			System.err.println("In valid User");
 			Log.error("Valid User Error: ", e);
 		}
-		response.setFailureMessage(userId + " User Id not Fetched Sucessfully");
-		Log.info(userId + " User Id not Fetched Sucessfully");
+		response.setFailureMessage(userId + " User Id not Fetched Sucessfully ");
+		if (response.getSucessMessage() == null) {
+			Log.info(userId + " User Id not Fetched Sucessfully");
+		}
 		return response;
 
 	}
 
 	// Update
 
-	public ResponseHandle updateMealType(int mealType, int mealId) throws validItems,DuplicateMealDetailException {
+	public ResponseHandle updateMealType(int mealType, int mealId) throws validItems, DuplicateMealDetailException {
 
 		try {
 			boolean flag = mealDetailsBO.updateMealType(mealType, mealId);
@@ -96,26 +97,26 @@ public class MealDetailService {
 			}
 		} catch (SQLException e) {
 			if (e.getErrorCode() == 1062) {
-				System.err.println("Duplicate entry:"+e.getMessage());
-				Log.error("Duplicate Entry",e);
+				System.err.println("Duplicate Entry");
+				Log.error("Duplicate Entry", e);
 			} else {
-				System.err.println("SQL Error: " + e.getMessage());
 				Log.error("SQL Error: ", e);
 			}
 		} catch (ValidMealType e) {
-			System.err.println("Valid mealType " + e.getMessage());
+			System.err.println("Enter the Valid MealType");
 			Log.error("Valid mealType ", e);
 		} catch (validItems e) {
-			System.err.println("Valid meal ID " + e.getMessage());
 			Log.error("Valid meal ID ", e);
 		}
-		response.setFailureMessage("Failure to Update Meal Type " + mealId);
-		Log.info("Failure to Update Meal Type " + mealId);
+		response.setFailureMessage("Failure to Update Meal Type for Id" + mealId);
+		if (response.getSucessMessage() == null) {
+			Log.info("Failure to Update Meal Type " + mealId);
+		}
 		return response;
 
 	}
 
-	public ResponseHandle updateMealDate(String mealDate, int mealId)throws DuplicateMealDetailException,ValidDateEx {
+	public ResponseHandle updateMealDate(String mealDate, int mealId) throws DuplicateMealDetailException, ValidDateEx {
 
 		try {
 			boolean flag = mealDetailsBO.updateMealDate(mealDate, mealId);
@@ -125,21 +126,21 @@ public class MealDetailService {
 			}
 		} catch (SQLException e) {
 			if (e.getErrorCode() == 1062) {
-				System.err.println("Duplicate entry:"+e.getMessage());
-				Log.error("Duplicate Entry",e);
+				System.err.println("Duplicate Entry");
+				Log.error("Duplicate Entry", e);
 			} else {
-				System.err.println("SQL Error: " + e.getMessage());
 				Log.error("SQL Error: ", e);
 			}
 		} catch (ValidDateEx e) {
-			System.err.println("Date Error: " + e.getMessage());
+			System.err.println("In valid Date");
 			Log.error("Date Error: ", e);
 		} catch (validItems e) {
-			System.err.println("Valid meal ID : " + e.getMessage());
 			Log.error("Valid meal ID : ", e);
 		}
 		response.setFailureMessage("Failure to Update MealDate " + mealId);
-		Log.info("Failure to Update MealDate " + mealId);
+		if (response.getSucessMessage() == null) {
+			Log.info("Failure to Update MealDate " + mealId);
+		}
 		return response;
 
 	}
@@ -154,41 +155,39 @@ public class MealDetailService {
 			}
 		} catch (SQLException e) {
 			if (e.getErrorCode() == 1062) {
-				System.err.println("Duplicate entry:"+e.getMessage());
-				Log.error("Duplicate Entry",e);
+				System.err.println("Duplicate Entry");
+				Log.error("Duplicate Entry", e);
 			} else {
-				System.err.println("SQL Error: " + e.getMessage());
 				Log.error("SQL Error: ", e);
 			}
 		} catch (validItems e) {
-			System.err.println("Valid meal ID : " + e.getMessage());
+			System.out.println("In valid MealId " + mealId);
 			Log.error("Valid meal ID : ", e);
 		}
-		response.setFailureMessage("Failure to Update the MealType " + mealId);
-		Log.info("Failure to Update the MealType " + mealId);
+		response.setFailureMessage("Failure to Update the MealType for meal Id " + mealId);
+		if (response.getSucessMessage() == null) {
+			Log.info("Failure to Update the MealType for meal Id" + mealId);
+		}
 		return response;
 
 	}
 
-	// Delete
+	// FIND ALL
 
-	public ResponseHandle deletemealDetails(int mealId) throws validItems {
+	public ResponseHandle findAllDetails() throws validItems {
 
 		try {
-			boolean flag = mealDetailsBO.deletemealDetails(mealId);
-			if (flag) {
-				response.setSucessMessage("Sucessfully Deleted " + mealId);
-				Log.info("Sucessfully Deleted " + mealId);
-			}
-		} catch (validItems e) {
-			System.err.println("Error Enter valid mealId :" + e.getMessage());
-			Log.error("Error Enter valid mealId :", e);
+			List<MealDetails> mealDetails = mealDetailsBO.findAllDetails();
+			response.setmealDetails(mealDetails);
+			response.setSucessMessage("Sucessfully Details is fetched ");
+			Log.info("Sucessfully Details are fetched " + mealDetails);
 		} catch (SQLException e) {
-			System.err.println("SQL Error: " + e.getMessage());
 			Log.error("SQL Error: ", e);
 		}
-		response.setFailureMessage(mealId + " Not deleted");
-		Log.info(mealId + " Not deleted");
+		response.setFailureMessage(" Details not Fetched Sucessfully");
+		if (response.getSucessMessage() == null) {
+			Log.info("Details not Fetched Sucessfully");
+		}
 		return response;
 	}
 
@@ -197,47 +196,38 @@ public class MealDetailService {
 	public ResponseHandle displayUsingJoins() {
 
 		try {
-			List<UserInfo> user = mealDetailsBO.displayUsingJoins();
-			if (user.size() > 0) {
-				response.setUser(user);
+			List<UserInfo> users = mealDetailsBO.displayUsingJoins();
+			if (users.size() > 0) {
+				response.setUser(users);
 				response.setSucessMessage("Details are Sucessfully Displayed");
-				Log.info("Details are Sucessfully Displayed");
+				Log.info("Details are Sucessfully Displayed " + users);
 			}
 		} catch (SQLException e) {
-			System.err.println("SQL Error: " + e.getMessage());
 			Log.error("SQl Error : ", e);
 		}
 		response.setFailureMessage("Failure to Display the Details");
-		Log.info("Failure to Display the Details");
+		if (response.getSucessMessage() == null) {
+			Log.info("Failure to Display the Details");
+		}
 		return response;
 
 	}
+//Streams
 
 	public ResponseHandle getUserByGender(int value) {
 
 		try {
-			List<UserInfo> user = mealDetailsBO.displayUsingJoins();
-			if (user.size() > 0) {
-				List<UserInfo> result;
-
-				if (value == 1) {
-					result = user.stream().filter(users -> "Female".equalsIgnoreCase(users.getGender()))
-							.collect(Collectors.toList());
-				} else {
-					result = user.stream().filter(users -> "Male".equalsIgnoreCase(users.getGender()))
-							.collect(Collectors.toList());
-				}
-
-				response.setUser(result);
-				response.setSucessMessage("Details are Sucessfully Displayed");
-				Log.info("Details are Sucessfully Displayed");
-			}
+			List<UserInfo> users = mealDetailsBO.displayUsingStreams(value);
+			response.setUser(users);
+			response.setSucessMessage("Details are Sucessfully Displayed");
+			Log.info("Details are Sucessfully Displayed");
 		} catch (SQLException e) {
-			System.err.println("SQL Error: " + e.getMessage());
 			Log.error("SQl Error : ", e);
 		}
 		response.setFailureMessage("Failure to Display the Details");
-		Log.info("Failure to Display the Details");
+		if (response.getSucessMessage() == null) {
+			Log.info("Failure to Display the Details");
+		}
 		return response;
 	}
 

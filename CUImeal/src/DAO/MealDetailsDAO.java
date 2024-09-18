@@ -13,15 +13,10 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 
 	public MealDetailsDAO() throws SQLException {
 
-		// try {
-
 		String url = "jdbc:mysql://localhost:3306/project";
 		String user = "root";
 		String password = "tiger";
 		conn = DriverManager.getConnection(url, user, password);
-//		} catch (SQLException e) {
-//			throw new SQLException("Failed to connect to the database.", e);
-//		}
 
 	}
 
@@ -83,7 +78,7 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 				mealDetails.setCarbs(rs.getDouble(7));
 				mealDetails.setVitamins(rs.getDouble(8));
 				mealDetails.setUserId(rs.getInt(9));
-
+				mealDetails.setFoodType(rs.getString(10));
 				mealDetailsList.add(mealDetails);
 			}
 		}
@@ -109,13 +104,8 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 			return true;
 		}
 		finally {
-			try {
 				if (conn != null)
 					conn.close();
-			} // TRY
-			catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 
 	}
@@ -135,13 +125,8 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 			}
 		}
 		finally {
-			try {
 				if (conn != null)
 					conn.close();
-			} // TRY
-			catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		return flag;
 	}
@@ -161,40 +146,48 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 			}
 		}
 		finally {
-			try {
 				if (conn != null)
 					conn.close();
-			} // TRY
-			catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		return flag;
 	}
 
-	// DELETE
+	// FIND ALL
 
 	@Override
-	public boolean deletemealDetails(int mealId) throws SQLException {
+	public List<MealDetails> findAllDetails() throws SQLException {
 
-		boolean flag = false;
-		String query = "DELETE FROM meal_details WHERE meal_id=?";
+		List<MealDetails> mealDetailsList = new ArrayList<>();
+
+		String query = "SELECT md.meal_id, md.meal_date, md.food_name, md.quantity, md.calories, md.protein, md.carbs, md.vitamins, md.user_id, mi.meal "
+				+"FROM meal_details md JOIN meal_info mi ON md.meal_type = mi.meal_type";
+
 		try {
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setInt(1, mealId);
-			ps.executeUpdate();
-			flag = true;
-		}
-		finally {
-			try {
-				if (conn != null)
-					conn.close();
-			} // TRY
-			catch (SQLException e) {
-				e.printStackTrace();
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+			    MealDetails mealDetails = new MealDetails();
+			    
+			    mealDetails.setMealType(rs.getInt(1));         
+			    mealDetails.setMealDate(rs.getString(2));     
+			    mealDetails.setFoodName(rs.getString(3));    
+			    mealDetails.setQuantity(rs.getDouble(4));   
+			    mealDetails.setCalories(rs.getDouble(5));    
+			    mealDetails.setProtein(rs.getDouble(6));     
+			    mealDetails.setCarbs(rs.getDouble(7));      
+			    mealDetails.setVitamins(rs.getDouble(8));     
+			    mealDetails.setUserId(rs.getInt(9));         
+			    mealDetails.setFoodType(rs.getString(10));
+			    mealDetailsList.add(mealDetails);
 			}
 		}
-		return flag;
+		finally {
+			if (conn != null)
+				conn.close();
+		}
+
+		return mealDetailsList;
 
 	}
 
@@ -203,20 +196,23 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 	@Override
 	public List<UserInfo> displayUsingJoins() throws SQLException {
 		List<UserInfo> userList = new ArrayList<>();
-		String query = "SELECT u.user_id, u.user_name, g.gender, COALESCE(SUM(m.quantity), 0) AS total_calories "
+		String query = "SELECT u.user_id, u.user_name, g.gender, COALESCE(SUM(m.quantity), 0) AS total_quantity "
 				+ "FROM Users u " + "INNER JOIN gender_info g ON u.gender_id = g.gender_id "
 				+ "INNER JOIN meal_details m ON u.user_id = m.user_id " + "GROUP BY u.user_id, u.user_name, g.gender "
 				+ "ORDER BY u.user_id";
 
-		try (PreparedStatement ps = conn.prepareStatement(query); ResultSet rs = ps.executeQuery()) {
-
+		System.out.println("syntac");
+		try{
+			PreparedStatement ps = conn.prepareStatement(query); 
+			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				UserInfo userInfo = new UserInfo();
-				userInfo.setId(rs.getInt("user_id"));
+				userInfo.setId(rs.getInt(1));
 				userInfo.setName(rs.getString("user_name"));
 				userInfo.setGender(rs.getString("gender"));
-				userInfo.setQuantity(rs.getDouble("total_calories"));
+				userInfo.setQuantity(rs.getDouble("total_quantity"));
 				userList.add(userInfo);
+				//System.out.println(rs.getInt(1));
 			}
 
 		}
@@ -227,7 +223,7 @@ public class MealDetailsDAO implements IMealDetailsDAO {
 
 		return userList;
 	}
-
+		
 	// Check User Exit or Not
 
 	@Override
